@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\StorelocController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [StorelocController::class, 'index'])->name('index');
 Route::get('/resultats', [StorelocController::class, 'results'])->name('results');
+Route::get('/store/{store}', [StoreController::class, 'show'])->name('store.show');

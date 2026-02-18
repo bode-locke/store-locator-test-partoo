@@ -1,4 +1,7 @@
 <html>
+
+    @vite('resources/css/app.css')
+
     <head>
         <title>Storeloc Test</title>
         <style>
@@ -16,6 +19,17 @@
         </style>
     </head>
     <body>
-        @yield('content')
+        <div class="flex flex-col h-screen justify-between">
+            {{-- Header --}}
+            <x-header />
+
+            {{-- Main content --}}
+            <main class="py-6">
+                @yield('content')
+            </main>
+
+            {{-- Footer --}}
+            <x-footer />
+        </div>
     </body>
 </html>
