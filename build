@@ -5,5 +5,4 @@ sed -ri -e "s/%GID%/$(id -g)/g" .env
 docker compose up -d
 docker compose exec -u www-data app composer install
 docker compose exec -u www-data app npm install
-docker compose exec -u www-data app npm run dev
 

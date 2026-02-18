@@ -36,11 +36,11 @@ services:
         networks:
             - sltest
         depends_on:
-            - mysql     
+            - mysql
 volumes:
     mysql_data:
         driver: local
-        name: sltest_mysql_data        
+        name: sltest_mysql_data
 networks:
     sltest:
         name: sltest_network

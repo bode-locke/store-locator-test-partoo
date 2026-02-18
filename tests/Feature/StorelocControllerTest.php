@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature;
 
 use Tests\TestCase;
 use Mockery;
@@ -25,7 +25,6 @@ class StorelocControllerTest extends TestCase
         Service::factory()->count(3)->create();
 
         $response = $this->get(route('index'));
-
         $response->assertStatus(200);
         $response->assertViewIs('index');
         $response->assertViewHas('services', function ($services) {

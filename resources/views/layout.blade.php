@@ -1,6 +1,9 @@
 <html>
 
-    @vite('resources/css/app.css')
+    @if (!app()->environment('testing'))
+        @vite(['resources/css/app.css'])
+    @endif
+
 
     <head>
         <title>Storeloc Test</title>
